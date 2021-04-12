@@ -288,6 +288,7 @@ a {
     }
     .single-column-header-title {
       font-size: $single-column-nav-title-size;
+      font-family: $mono-font-list;
     }
     .single-column-header-subtitle {
       font-size: $single-column-nav-subtitle-size;
@@ -382,13 +383,14 @@ a {
   $nav-item-active-background-alpha: 0.03;
   $nav-item-active-color-darken: 20%;
   .nav-head {
-    padding: 30px 28px 40px 20px;
+    padding: 36px 28px 40px 20px;
     cursor: hand;
     cursor: pointer;
     margin-bottom: 10px;
     transition: all 0.2s linear;
     color: $deep-dark-accent;
     .nav-title {
+      font-family: $mono-font-list;
       font-size: $nav-title-size;
       line-height: $nav-title-size * 1.4;
     }
