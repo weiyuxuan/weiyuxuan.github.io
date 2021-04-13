@@ -67,12 +67,19 @@ body {
   word-wrap: break-word;
 }
 
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  margin-top: 1em;
+  margin-bottom: .5em;
+  font-weight: 600;
+}
+
 h1 {
   font-size: $h1;
 }
 
 h2 {
   font-size: $h1 - 1 * $h-diff;
+  margin-top: 2em;
 }
 
 h3 {
@@ -89,12 +96,6 @@ h5 {
 
 h6 {
   font-size: $h1 - 5 * $h-diff;
-}
-
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-  margin-top: 1em;
-  margin-bottom: .5em;
-  font-weight: 600;
 }
 
 textarea,
