@@ -22,7 +22,7 @@
   <meta name="theme-color" content="#ffffff">
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
-<link rel="stylesheet" href="/css/cafe.css?91915393">
+<link rel="stylesheet" href="/css/cafe.css?96399514">
 
 
 <meta name="generator" content="Hexo 5.4.0"></head>
@@ -250,6 +250,18 @@
 <li>目标对象整条原型链上的属性都能遍历到</li>
 </ul>
 <h4 id="import-meta"><a href="#import-meta" class="headerlink" title="import.meta"></a>import.meta</h4><p>用来读取 ES Module 特定的元信息，import.meta 本身是个对象，原型为 null</p>
+<h2 id="ES2021-已进入-stage-4"><a href="#ES2021-已进入-stage-4" class="headerlink" title="ES2021 (已进入 stage-4)"></a>ES2021 (已进入 stage-4)</h2><h4 id="String-prototype-replaceAll"><a href="#String-prototype-replaceAll" class="headerlink" title="String.prototype.replaceAll()"></a>String.prototype.replaceAll()</h4><p>返回一个全新的字符串，所有符合匹配规则的字符都将被替换掉</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> str = <span class="string">&#x27;hello world&#x27;</span>;</span><br><span class="line">str.replaceAll(<span class="string">&#x27;l&#x27;</span>, <span class="string">&#x27;&#x27;</span>); <span class="comment">// &quot;heo word&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="Promise-any"><a href="#Promise-any" class="headerlink" title="Promise.any()"></a>Promise.any()</h4><p>接收一组 Promise，返回第一个成功的 Promise，或者当全部失败时，返回失败的 Promise</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> promises = [</span><br><span class="line">  <span class="built_in">Promise</span>.resolve(<span class="number">1</span>),</span><br><span class="line">  <span class="built_in">Promise</span>.resolve(<span class="number">2</span>),</span><br><span class="line">  <span class="built_in">Promise</span>.reject(<span class="string">&#x27;error&#x27;</span>)</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line"><span class="built_in">Promise</span></span><br><span class="line">  .any(promises)</span><br><span class="line">  .then(<span class="function"><span class="params">responses</span> =&gt;</span> <span class="built_in">console</span>.log(responses))</span><br><span class="line">  .catch(<span class="function"><span class="params">e</span> =&gt;</span> <span class="built_in">console</span>.log(e))</span><br></pre></td></tr></table></figure>
+
+<h4 id="WeakRefs"><a href="#WeakRefs" class="headerlink" title="WeakRefs"></a>WeakRefs</h4><p>WeakRef 是一个更高级的 API，它提供了真正的弱引用（对象的弱引用是指当该对象应该被 GC 回收时不会阻止 GC 的回收行为）</p>
+<h4 id="逻辑运算符和赋值表达式"><a href="#逻辑运算符和赋值表达式" class="headerlink" title="逻辑运算符和赋值表达式"></a>逻辑运算符和赋值表达式</h4><p>结合了逻辑运算符 <code>&amp;&amp;</code> <code>||</code> <code>??</code> 和赋值表达式 <code>=</code> 的新运算符</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a ||= b <span class="comment">// 等价于 a = a || (a = b)</span></span><br><span class="line">a &amp;&amp;= b <span class="comment">// 等价于 a = a &amp;&amp; (a = b)</span></span><br><span class="line">a ??= b <span class="comment">// 等价于 a = a ?? (a = b)</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="数字分隔符"><a href="#数字分隔符" class="headerlink" title="数字分隔符"></a>数字分隔符</h4><p>可以在数字之间创建可视化分隔符，通过_下划线来分割数字</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1_000_000_000</span> === <span class="number">1000000000</span>; <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
 
         </div>
       </div>
@@ -279,7 +291,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js" integrity="sha256-FtWfRI+thWlNz2sB3SJbwKx5PgMyKIVgwHCTwa3biXc=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@14.2.1/dist/smooth-scroll.polyfills.min.js" integrity="sha256-CI4Gq5E0io1Pv0xM3qPM+NUIOhbIBvC3GiN1Y4KhXpw=" crossorigin="anonymous"></script>
-<script src="/js/cafe.js?28635664"></script>
+<script src="/js/cafe.js?9376538"></script>
 
 
 
