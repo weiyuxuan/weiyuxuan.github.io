@@ -61,12 +61,6 @@ body {
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
   color: $color-text;
-  overflow: hidden;
-}
-
-#root {
-  overflow-y: auto;
-  height: 100vh;
 }
 
 * {
